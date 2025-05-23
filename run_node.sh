@@ -1,0 +1,1 @@
+for i in {1..3}; do k6 run --summary-export=results/node/node_$i.json index.js; done
