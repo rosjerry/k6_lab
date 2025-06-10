@@ -1,0 +1,18 @@
+# install k6 grafana
+sudo dnf install https://dl.k6.io/rpm/repo.rpm &&
+sudo dnf install k6
+
+sudo yum install https://dl.k6.io/rpm/repo.rpm &&
+sudo yum install k6
+
+
+# install git
+yum install git -y
+
+# install gh cli
+type -p yum-config-manager >/dev/null || sudo yum install yum-utils &&
+sudo yum-config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo &&
+sudo yum install gh
+
+# auth gh cli
+gh auth login
