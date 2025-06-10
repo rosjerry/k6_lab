@@ -7,11 +7,11 @@ export default function () {
       'Content-Type': 'application/json',
     },
   };
-  http.post('http://3.71.185.56:8080/todos', payload, params);
+  http.post('http://3.120.140.31:8080/todos', payload, params);
 }
 
 export function teardown() {
-  http.get('http://3.71.185.56:8080/todos');
+  http.get('http://3.120.140.31:8080/todos');
 }
 
 export const options = {
