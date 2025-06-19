@@ -15,6 +15,6 @@ export function teardown() {
 }
 
 export const options = {
-  vus: 20,
-  duration: '10s',
+  vus: 50,
+  duration: '20s',
 };
