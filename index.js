@@ -7,11 +7,11 @@ export default function () {
       'Content-Type': 'application/json',
     },
   };
-  http.post('http://3.120.140.31:8080/todos', payload, params);
+  http.post('http://node-1-2123568256.eu-central-1.elb.amazonaws.com:8080/todos', payload, params);
 }
 
 export function teardown() {
-  http.get('http://3.120.140.31:8080/todos');
+  http.get('http://node-1-2123568256.eu-central-1.elb.amazonaws.com:8080/todos');
 }
 
 export const options = {
