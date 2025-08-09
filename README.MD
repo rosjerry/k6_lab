@@ -34,25 +34,6 @@ sudo yum install https://dl.k6.io/rpm/repo.rpm
 sudo yum install k6
 ```
 
-#### For Ubuntu/Debian:
-```bash
-sudo gpg -k
-sudo gpg --no-default-keyring --keyring /usr/share/keyrings/k6-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
-echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
-sudo apt-get update
-sudo apt-get install k6
-```
-
-#### For macOS:
-```bash
-brew install k6
-```
-
-#### For Windows:
-```bash
-choco install k6
-```
-
 ### 2. Install Go
 
 #### For RHEL/CentOS/Amazon Linux:
@@ -67,14 +48,6 @@ sudo apt-get update
 sudo apt-get install golang-go
 ```
 
-#### For macOS:
-```bash
-brew install go
-```
-
-#### For Windows:
-Download from [golang.org](https://golang.org/dl/)
-
 ### 3. Install Node.js
 
 #### Using NVM (Recommended):
@@ -85,35 +58,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 # Reload shell configuration
 source ~/.bashrc
 
-# Install latest LTS version
-nvm install --lts
-nvm use --lts
-```
-
-#### Alternative - Direct installation:
-- **Ubuntu/Debian**: `sudo apt-get install nodejs npm`
-- **macOS**: `brew install node`
-- **Windows**: Download from [nodejs.org](https://nodejs.org/)
-
 ### 4. Install Git
 
 #### For RHEL/CentOS/Amazon Linux:
 ```bash
 sudo yum install git -y
 ```
-
-#### For Ubuntu/Debian:
-```bash
-sudo apt-get install git
-```
-
-#### For macOS:
-```bash
-brew install git
-```
-
-#### For Windows:
-Download from [git-scm.com](https://git-scm.com/)
 
 ### 5. Install GitHub CLI (Optional)
 
@@ -122,16 +72,6 @@ Download from [git-scm.com](https://git-scm.com/)
 type -p yum-config-manager >/dev/null || sudo yum install yum-utils
 sudo yum-config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
 sudo yum install gh
-
-# For Ubuntu/Debian
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install gh
-
-# For macOS
-brew install gh
-```
 
 After installation, authenticate:
 ```bash
@@ -288,3 +228,5 @@ node --version
 ## License
 
 [Add your license information here]
+
+p.s. there are directory 'results', inside it there are 'go' and 'node' directories, if you are going to make performance test yourself, remove existing json results.
